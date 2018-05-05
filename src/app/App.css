@@ -1,0 +1,25 @@
+.main {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+}
+
+.header {
+  left:40px;
+  position: fixed;
+  top: 20px;
+  font-size: 24px;
+  opacity: 0.6;
+}
+.footer {
+  right:40px;
+  position: fixed;
+  bottom: 20px;
+  font-weight: lighter;
+  color: #606060;
+}
