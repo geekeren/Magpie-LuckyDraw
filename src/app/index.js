@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
+import { Redirect, Route, Switch } from 'react-router'
 import Background from '../component/background';
 import Header from '../component/header';
 import Footer from '../component/footer';
 import './App.css';
+import Start from "../component/start";
+import LotteryPool from "../component/lottery-pool";
+import LotteryDrawing from "../component/lottery-drawing";
+import Result from "../component/result";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Background />
+      <Background>
+        <Header className={'header'}/>
         <article className={'main'}>
-          <Header className={'header'} />
-          <Footer className={'footer'} />
+          <Switch>
+            <Route exact path='/' component={Start}/>
+            <Route path='/result' component={Result}/>
+            <Route path='/lottery-pool' component={LotteryPool}/>
+            <Route path='/lottery-drawing' component={LotteryDrawing}/>
+            <Redirect from="/*" to="/" />
+          </Switch>
         </article>
-      </div>
-
+        <Footer className={'footer'}/>
+      </Background>
     );
   }
 }
