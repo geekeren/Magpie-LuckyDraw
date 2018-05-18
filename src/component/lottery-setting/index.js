@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setLotteryPool } from '../../redux/actions/lotteryPool'
 import Participant from "../../model/Participant";
-import './lottery-pool.css'
+import './lottery-setting.css'
+import LotteryEdit from "../lottery-edit/index";
 
 class LotteryPool extends Component {
   constructor(props) {
@@ -18,28 +19,19 @@ class LotteryPool extends Component {
 
   render() {
     return (
-      <div className="lottery-pool">
-        <header>抽奖池设置</header>
-        <div id="input_container">
-          <textarea
-            id="nameList"
-            type="text"
-            multiple
-            required
-            defaultValue={this.props.allParticipants[0]}
-            onChange={(event) => this.onTextChange(event.target.value)}
-            style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
-          />
-          <div className={'err_msg'}>{this.state.error}</div>
-        </div>
+      <div className="lottery-setting">
+        <header>奖项设置</header>
+        <section className="lottery-edit">
+          <LotteryEdit/>
+        </section>
         <section className={'next-btn'}>
-          <button onClick={this.saveNameList}>NEXT</button>
+          <button onClick={this.next}>NEXT</button>
         </section>
       </div>
     );
   }
   next = () => {
-    this.props.history.push("/lottery-draw")
+    this.props.history.push("/lottery-pool")
   }
   verifyParticipantsInput = (value) => {
     return new Promise((resolve, reject) => {
@@ -65,12 +57,12 @@ class LotteryPool extends Component {
           });
         })
         .catch(error => {
-            this.setState({
-              error: error.message
-            });
-          })
+          this.setState({
+            error: error.message
+          });
         })
-    };
+    })
+  };
 
   saveNameList = () => {
     this.verifyParticipantsInput(this.state.allParticipantsInput)

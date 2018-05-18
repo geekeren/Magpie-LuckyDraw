@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Fireworks from 'fireworks-react';
+import {
+  Link
+} from 'react-router-dom'
 
 class Start extends Component {
   render() {
     return (
-      <div>Create new Drawing</div>
+      <div><Link to="/activity-setting">Create new Drawing</Link></div>
     );
   }
 }

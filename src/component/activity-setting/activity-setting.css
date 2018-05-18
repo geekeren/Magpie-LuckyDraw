@@ -1,0 +1,16 @@
+.activity-setting {
+    width: 500px;
+
+}
+.activity-setting header {
+    font-size: 30px;
+}
+.activity-setting input {
+    width: 100%;
+    font-size: 25px;
+}
+
+.activity-setting section{
+    height: 100px;
+    margin: 20px 0px;
+}

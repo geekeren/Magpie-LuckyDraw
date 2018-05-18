@@ -67,6 +67,7 @@ class Background extends Component {
             position: 'fixed',
             width: '100%',
             height: '100%',
+            background: '#1a1a1a',
             backgroundImage: `url(${logo})`,
             backgroundSize: 'cover'
           }}

@@ -4,7 +4,7 @@ export default class Participant {
     this.phone = phone;
   }
   static fromString(str) {
-    const array = str.split(/\t+|\s+/, 3);
+    const array = str.split(/\t+|\s+/, 2);
     if(array[0] && array[1]) {
       return new Participant(array[0], array[1]);
     }

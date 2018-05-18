@@ -7,6 +7,8 @@ import './App.css';
 import Start from "../component/start";
 import LotteryPool from "../component/lottery-pool";
 import LotteryDrawing from "../component/lottery-drawing";
+import LotterySetting from "../component/lottery-setting";
+import ActivitySetting from "../component/activity-setting";
 import Result from "../component/result";
 
 class App extends Component {
@@ -20,6 +22,8 @@ class App extends Component {
             <Route path='/result' component={Result}/>
             <Route path='/lottery-pool' component={LotteryPool}/>
             <Route path='/lottery-drawing' component={LotteryDrawing}/>
+            <Route path='/lottery-setting' component={LotterySetting}/>
+            <Route path='/activity-setting' component={ActivitySetting}/>
             <Redirect from="/*" to="/" />
           </Switch>
         </article>

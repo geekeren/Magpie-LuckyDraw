@@ -1,0 +1,16 @@
+.lottery-setting {
+    width: 500px;
+}
+.lottery-setting header {
+    margin-bottom: 100px;
+    font-size: 30px;
+}
+.lottery-setting input {
+    width: 100%;
+    font-size: 25px;
+}
+
+.lottery-setting section.lottery-edit{
+    margin: 20px 0px;
+    height: 200px;
+}

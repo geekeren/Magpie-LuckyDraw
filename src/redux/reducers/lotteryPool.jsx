@@ -1,13 +1,18 @@
 import Action from '../actions/_actions'
 
 const initialState = () => ({
-  allParticipants: ['hello'],
+  allParticipants: [],
   winners: []
 });
 const lotteryPool = (state = initialState(), action) => {
   switch (action.type) {
     case Action.SET_LOTTERY_POOL:
       state.allParticipants = action.allParticipants || [];
+    case Action.ADD_WINNER:
+      if (action.winner) {
+        state.winners.push(action.winner);
+      }
+
   }
   return Object.assign({}, state);
 };

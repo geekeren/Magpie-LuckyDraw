@@ -1,0 +1,23 @@
+#input_container textarea {
+    background: rgba(3, 169, 244, 0.45);
+    height: 380px;
+    width: 500px;
+    max-width: 100%;
+    font-size: 20px;
+    padding: 10px 50px;
+    line-height: 1.2em;
+    color: #e1fde4;
+    font-weight: lighter;
+    word-spacing: 20px;
+    tab-size: 20px;
+    tab-stops: 10px;
+    display: table;
+}
+#input_container .err_msg {
+    text-align: right;
+    margin-top: -20px;
+    height: 30px;
+    font-size: 12px;
+    color: red;
+    padding: 2px;
+}
