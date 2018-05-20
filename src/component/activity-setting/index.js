@@ -20,7 +20,7 @@ class ActivitySetting extends Component {
         <div>
           <header>活动名称</header>
           <section>
-            <input defaultValue={''} onChange={this.onNameChange.bind(this)}/>
+            <input defaultValue={this.props.activityName} onChange={this.onNameChange.bind(this)}/>
           </section>
           <section className={'next-btn'}>
             <button onClick={this.next.bind(this)}>NEXT</button>
@@ -43,6 +43,7 @@ class ActivitySetting extends Component {
 
 ActivitySetting.propTypes = {
   setActivityName: PropTypes.func.isRequired,
+  activityName: PropTypes.string.isRequired,
 };
 const mapStateToProps = state => ({
   activityName: state.dataReducer.activitySetting.name,

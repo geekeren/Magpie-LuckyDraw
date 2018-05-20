@@ -1,0 +1,23 @@
+.name-cloud-container {
+    position: fixed;
+    bottom:0;
+    pointer-events: none;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.lottery-drawing{
+    width: 100%;
+    text-align: center;
+}
+
+header.prize-title{
+    margin: 20px;
+    font-size: 30px;
+}
+
+div.rolling {
+    height: 400px;
+    font-size: 60px;
+    animation-name: am-fade;
+}

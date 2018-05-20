@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js'
 import logo from './bg.jpeg';
+import './background.css';
 
 class Background extends Component {
   render() {
     return (
-      <div>
+      <div className={'particles'}>
         <Particles
           params={{
             particles: {
@@ -69,7 +70,8 @@ class Background extends Component {
             height: '100%',
             background: '#1a1a1a',
             backgroundImage: `url(${logo})`,
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            pointerEvents: 'none',
           }}
         />
         {this.props.children}

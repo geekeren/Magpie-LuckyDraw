@@ -12,7 +12,7 @@ class LotteryPool extends Component {
     super(props);
     this.state = {
       error: '',
-      allParticipantsInput: ''
+      allParticipantsInput: this.props.allParticipants.join("\n")
     }
   }
 
@@ -26,7 +26,7 @@ class LotteryPool extends Component {
             type="text"
             multiple
             required
-            defaultValue={this.props.allParticipants[0]}
+            defaultValue={this.state.allParticipantsInput}
             onChange={(event) => this.onTextChange(event.target.value)}
             style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
           />
