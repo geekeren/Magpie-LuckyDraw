@@ -32,7 +32,7 @@ class LotteryDrawing extends Component {
           <div className={'rolling'}>
             {this.getContent()}
           </div>
-          <button disabled={this.state.btnDisabled} onClick={this.onClick.bind(this)}>{this.getButton()}</button>
+          <button className={this.state.btnDisabled ? "disable" : ""} disabled={this.state.btnDisabled} onClick={this.onClick.bind(this)}>{this.getButton()}</button>
         </div>
       </div>
     );

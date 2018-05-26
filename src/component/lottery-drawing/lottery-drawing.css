@@ -21,3 +21,7 @@ div.rolling {
     font-size: 60px;
     animation-name: am-fade;
 }
+button.disable {
+    cursor: wait;
+    background: #a8d6d6;
+}
