@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
      <header className={this.props.className}>
-       <img width={24} src={logo}/>
+       <img width={24}  height={24} src={logo}/>
        <span>{this.props.activityName}</span>
      </header>
     );

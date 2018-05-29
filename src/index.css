@@ -8,3 +8,6 @@ body {
 #root > div{
   height: 100vh;
 }
+a {
+  color: aliceblue;
+}

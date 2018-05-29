@@ -10,7 +10,7 @@ class ActivitySetting extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activityName: ''
+      activityName: props.activityName
     }
   }
 
@@ -23,7 +23,7 @@ class ActivitySetting extends Component {
             <input defaultValue={this.props.activityName} onChange={this.onNameChange.bind(this)}/>
           </section>
           <section className={'next-btn'}>
-            <button onClick={this.next.bind(this)}>NEXT</button>
+            <button disabled={!this.state.activityName} className={!this.state.activityName ? "disable" : ''} onClick={this.next.bind(this)}>NEXT</button>
           </section>
         </div>
       </div>
@@ -33,9 +33,9 @@ class ActivitySetting extends Component {
     this.setState({
       activityName: element.target.value
     })
-  }
+  };
   next = () => {
-    this.props.setActivityName(this.state.activityName)
+    this.props.setActivityName(this.state.activityName);
     this.props.history.push("/lottery-setting")
   }
 

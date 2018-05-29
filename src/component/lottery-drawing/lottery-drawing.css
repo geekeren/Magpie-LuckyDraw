@@ -18,10 +18,16 @@ header.prize-title{
 
 div.rolling {
     height: 400px;
-    font-size: 60px;
-    animation-name: am-fade;
+    font-size: 80px;
 }
-button.disable {
-    cursor: wait;
-    background: #a8d6d6;
+
+.rolling .selectedParticipant .name {
+    color: yellow;
+}
+
+.rolling .selectedParticipant .phone {
+    font-size: 60px;
+}
+.rolling .selectedParticipant .phone .mask {
+    font-size: 0.7em;
 }

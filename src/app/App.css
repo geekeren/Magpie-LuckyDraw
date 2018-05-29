@@ -12,9 +12,14 @@
 .header {
   left:40px;
   position: fixed;
+  display: flex;
   top: 20px;
   font-size: 24px;
   opacity: 0.6;
+  align-items: center;
+}
+.header img {
+  margin: 0px 10px 2px 2px;
 }
 .footer {
   right:40px;
@@ -33,6 +38,17 @@ button {
   width: 100px;
   border-radius: 50px;
   border: none;
+}
+
+button.wait {
+  cursor: wait;
+  background: #a8d6d6;
+}
+
+button.disable {
+  cursor: not-allowed;
+  background: #bccfd6;
+  color: #a9bfc6;
 }
 
 .next-btn {

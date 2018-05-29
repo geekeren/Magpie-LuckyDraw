@@ -6,7 +6,7 @@ import {
 class Start extends Component {
   render() {
     return (
-      <div><Link to="/activity-setting">Create new Drawing</Link></div>
+      <div><Link to="/activity-setting">创建一个抽奖活动</Link></div>
     );
   }
 }

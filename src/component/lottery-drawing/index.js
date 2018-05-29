@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import DrawService from "../../service/DrawService";
-import { addWinner } from '../../redux/actions/lotteryPool'
+import { addWinner } from '../../redux/actions/lotteryPool';
+import maskPhone from '../../utils/phone_mask';
 import { connect } from 'react-redux';
 import TagCloud from "../common/tag-cloud";
 import './lottery-drawing.css'
@@ -12,7 +13,7 @@ class LotteryDrawing extends Component {
     super(props);
 
     this.state = {
-      display: '等待开奖',
+      selectedParticipant: {},
       currentPrize: '',
       isPrizeChanged: false,
       btnDisabled: false,
@@ -32,7 +33,7 @@ class LotteryDrawing extends Component {
           <div className={'rolling'}>
             {this.getContent()}
           </div>
-          <button className={this.state.btnDisabled ? "disable" : ""} disabled={this.state.btnDisabled} onClick={this.onClick.bind(this)}>{this.getButton()}</button>
+          <button className={this.state.btnDisabled ? "wait" : ""} disabled={this.state.btnDisabled} onClick={this.onClick.bind(this)}>{this.getButton()}</button>
         </div>
       </div>
     );
@@ -103,20 +104,23 @@ class LotteryDrawing extends Component {
   }
   getTitle = () => {
     if (this.state.existingCountOfCurrentPrize === 0 && !this.state.isPrizeChanged) {
-      return this.state.currentPrize.title;
+      return `${this.state.currentPrize.title}(${this.state.currentPrize.totalCount}名)`
     } else if(this.state.noPrize){
       return "";
     }
-    return `${this.state.currentPrize.title}( ${this.state.existingCountOfCurrentPrize} / ${this.state.currentPrize.totalCount})`
+    return `${this.state.currentPrize.title}(${this.state.existingCountOfCurrentPrize} / ${this.state.currentPrize.totalCount})`
   };
 
   getContent = () => {
-    if (this.state.existingCountOfCurrentPrize === 0 && !this.drawService.isRolling && !this.state.isPrizeChanged) {
+    if (!this.state.selectedParticipant.phone || (this.state.existingCountOfCurrentPrize === 0 && !this.drawService.isRolling && !this.state.isPrizeChanged)) {
       return "等待开奖";
     } else if(this.state.noPrize){
       return "抽奖结束";
     }
-    return this.state.display
+    return (<div className="selectedParticipant">
+      <div className="name">{this.state.selectedParticipant.name}</div>
+      <div className="phone">{maskPhone(this.state.selectedParticipant.phone, '😝😝😝😝')}</div>
+    </div>)
   };
 
   getButton = () => {
@@ -132,7 +136,7 @@ class LotteryDrawing extends Component {
     this.drawService = DrawService.from(this.props.allParticipants)
       .setOnSelectedChangedCallback((selectedItem) => {
         this.setState({
-          display: selectedItem.name,
+          selectedParticipant: selectedItem,
         });
       })
       .setNoDuplicate(true)

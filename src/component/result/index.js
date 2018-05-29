@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import maskPhone from '../../utils/phone_mask';
 import './result.css';
 
 class Result extends Component {
@@ -19,7 +20,7 @@ class Result extends Component {
           {winnerGroup.winner.map(winner =>
             (<div className="result_item">
               <div className="result_name">{winner.name}</div>
-              <div className="result_phone">{winner.phone}</div>
+              <div className="result_phone">{maskPhone(winner.phone, '****')}</div>
             </div>)
           )}
 
