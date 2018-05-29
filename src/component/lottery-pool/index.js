@@ -11,7 +11,7 @@ class LotteryPool extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: '',
+      error: props.allParticipants && props.allParticipants.length > 0 ? '' : '抽奖池为空！',
       allParticipantsInput: this.props.allParticipants.join("\n")
     }
   }
@@ -33,11 +33,14 @@ class LotteryPool extends Component {
           <div className={'err_msg'}>{this.state.error}</div>
         </div>
         <section className={'next-btn'}>
-          <button onClick={this.saveNameList}>NEXT</button>
+          <button disabled={!!this.state.error} className={!!this.state.error ? "disable" : ''}
+                  onClick={this.saveNameList}>NEXT
+          </button>
         </section>
       </div>
     );
   }
+
   next = () => {
     this.props.history.push("/lottery-draw")
   }
@@ -59,18 +62,24 @@ class LotteryPool extends Component {
       allParticipantsInput: value,
     }, () => {
       this.verifyParticipantsInput(this.state.allParticipantsInput)
-        .then(() => {
-          this.setState({
-            error: ''
-          });
+        .then((allParticipants) => {
+          if (allParticipants.length > 0) {
+            this.setState({
+              error: ''
+            });
+          } else {
+            this.setState({
+              error: '抽奖池为空！'
+            });
+          }
         })
         .catch(error => {
-            this.setState({
-              error: error.message
-            });
-          })
+          this.setState({
+            error: error.message
+          });
         })
-    };
+    })
+  };
 
   saveNameList = () => {
     this.verifyParticipantsInput(this.state.allParticipantsInput)

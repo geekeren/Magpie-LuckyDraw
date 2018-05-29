@@ -4,14 +4,8 @@ const initialState = () => ({
     setting: [{
       id: 10001,
       title: '幸运奖',
-      totalCount: 2,
-    },
-      {
-        id: 10002,
-        title: '一等奖',
-        totalCount: 3,
-      }
-    ]
+      totalCount: 3,
+    }]
   }
 );
 const lotteryDrawing = (state = initialState(), action) => {
