@@ -26,7 +26,10 @@
   position: fixed;
   bottom: 20px;
   font-weight: lighter;
-  color: #606060;
+  color: #888888;
+}
+.footer a {
+  color: #a1a1a1;
 }
 button {
   cursor: pointer;

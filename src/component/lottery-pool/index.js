@@ -20,12 +20,14 @@ class LotteryPool extends Component {
     return (
       <div className="lottery-pool">
         <header>抽奖池设置</header>
+        <section>每一行表示一名参与者（格式：‘姓名 手机号’）</section>
         <div id="input_container">
           <textarea
             id="nameList"
             type="text"
             multiple
             required
+            placeholder="郭晓 13800138000"
             defaultValue={this.state.allParticipantsInput}
             onChange={(event) => this.onTextChange(event.target.value)}
             style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
