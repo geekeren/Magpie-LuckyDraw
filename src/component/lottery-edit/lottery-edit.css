@@ -1,4 +1,37 @@
-.prizes-container {
-    width: 100%;
-    text-align: center;
+.lottery-item-body {
+    user-select: none;
+    padding: 20px 30px;
+    background: #6fe5e436;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow: scroll;
+    box-shadow: #ffff0261 2px 4px 1px;
+    border: solid 1px #ffffff30;
+}
+.lottery-item, .lottery-items-header {
+    align-content: center;
+    padding: 5px 10px;
+    display: flex;
+
+}
+
+.lottery-item {
+    border-bottom: 1px solid #61606087;
+}
+
+.lottery-item span{
+    cursor: move;
+}
+.lottery-item-name {
+    margin-left: 20px;
+    display: inline-block;
+    flex: 1;
+}
+.lottery-item-count {
+    display: inline;
+}
+.lottery-items-header {
+    padding: 5px 25px 5px 50px;
+    color: #ffff02;
+    font-size: 1.2em;
 }

@@ -2,9 +2,17 @@ import Action from '../actions/_actions'
 
 const initialState = () => ({
     setting: [{
-      id: 10001,
+      id: 10003,
       title: '幸运奖',
       totalCount: 3,
+    },{
+      id: 10002,
+      title: '二等奖',
+      totalCount: 2,
+    },{
+      id: 10001,
+      title: '一等奖',
+      totalCount: 1,
     }]
   }
 );

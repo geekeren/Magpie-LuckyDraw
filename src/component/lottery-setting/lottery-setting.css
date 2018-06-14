@@ -2,15 +2,19 @@
     width: 500px;
 }
 .lottery-setting header {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     font-size: 30px;
 }
 .lottery-setting input {
-    width: 100%;
-    font-size: 25px;
+    text-align: center;
+    border: none;
+    color: white;
+    border-bottom: dashed 1px #ded4d494;
+    background: rgba(255, 255, 255, 0);
+    outline: none;
 }
 
 .lottery-setting section.lottery-edit{
     margin: 20px 0px;
-    height: 200px;
+    height: 300px;
 }
