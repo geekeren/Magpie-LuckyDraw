@@ -14,3 +14,6 @@ Magpie，“喜鹊”，取其“报喜”之意，故本系统是一款抽奖�
 [Try online](https://magpie.wangbaiyuan.cn/)
 
 ![预览](./doc/image/drawing.gif)
+
+## 关注与交流
+![关注我的微信](./doc/image/mp.jpg =100x100)
