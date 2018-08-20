@@ -16,4 +16,7 @@ Magpie，“喜鹊”，取其“报喜”之意，故本系统是一款抽奖�
 ![预览](./doc/image/drawing.gif)
 
 ## 关注与交流
-![关注我的微信](./doc/image/mp.jpg=100x100)
+<div style="text-align:center">
+关注我的微信
+<img src="https://fddcn.cn/wp-content/uploads/2017/12/WechatIMG117.jpeg" width="200"/> 
+</div>
