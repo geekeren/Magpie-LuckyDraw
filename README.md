@@ -11,7 +11,7 @@ Magpie，“喜鹊”，取其“报喜”之意，故本系统是一款抽奖�
 你也可以clone本项目，在本地使用`yarn start` 启动服务
 
 ## 预览
-[Try online](https://magpie.wangbaiyuan.cn/)
+[Try online](./build)
 
 ![预览](./doc/image/drawing.gif)
 
