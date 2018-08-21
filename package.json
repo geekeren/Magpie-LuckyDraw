@@ -1,7 +1,19 @@
 {
   "name": "magpie",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Geekeren",
+    "url": "http://wangbaiyuan.cn"
+  },
+  "description": "A lucky draw tool based on React, 基于React的炫酷的滚动抽奖程序",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekeren/Magpie-LuckyDraw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geekeren/Magpie-LuckyDraw/issues"
+  },
+  "homepage": "https://github.com/geekeren/Magpie-LuckyDraw",
   "dependencies": {
     "classnames": "^2.2.5",
     "fireworks-react": "^1.0.12",
@@ -17,13 +29,17 @@
     "react-table": "^6.8.2",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "shelljs": "^0.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "bin": {
+    "magpie": "./cli.js"
   },
   "devDependencies": {
     "react-edit-inline": "^1.0.8",
