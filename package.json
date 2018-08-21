@@ -2,7 +2,6 @@
   "name": "magpie",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://doc.magpie.wangbaiyuan.cn",
   "dependencies": {
     "classnames": "^2.2.5",
     "fireworks-react": "^1.0.12",
@@ -23,7 +22,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "helps": "react-scripts help",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
