@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/geekeren/Magpie-LuckyDraw/issues"
   },
-  "homepage": "https://github.com/geekeren/Magpie-LuckyDraw",
+  "homepage": "https://magpie.wangbaiyuan.cn",
   "dependencies": {
     "classnames": "^2.2.5",
     "fireworks-react": "^1.0.12",
