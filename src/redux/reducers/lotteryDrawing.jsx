@@ -3,7 +3,7 @@ import Action from '../actions/_actions'
 const initialState = () => ({
     setting: [{
       id: 10003,
-      title: '幸运奖',
+      title: '三等奖',
       totalCount: 3,
     },{
       id: 10002,

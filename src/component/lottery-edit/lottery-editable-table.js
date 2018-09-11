@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { SortableContainer, SortableElement, arrayMove, SortableHandle } from 'react-sortable-hoc';
 import { setLottery } from '../../redux/actions/lotteryDrawing';
 
-const DragHandle = SortableHandle(() => <span>三</span>); // This can be any component you want
+const DragHandle = SortableHandle(() => <span>≡</span>); // This can be any component you want
 const SortableItem = SortableElement(({ value, sortIndex }) =>
   <div key={sortIndex} className="lottery-item">
     <DragHandle/>

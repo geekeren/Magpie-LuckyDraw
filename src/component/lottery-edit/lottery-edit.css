@@ -7,6 +7,10 @@
     overflow: scroll;
     box-shadow: #ffff0261 2px 4px 1px;
     border: solid 1px #ffffff30;
+    font-size: 20px;
+}
+.lottery-item-body input {
+    font-size: 16px;
 }
 .lottery-item, .lottery-items-header {
     align-content: center;
