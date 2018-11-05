@@ -13,10 +13,10 @@ Magpie，“喜鹊”，取其“报喜”之意，故本系统是一款抽奖�
 ## 预览
 [Try online](https://magpie.wangbaiyuan.cn)
 
-![预览](./doc/image/drawing.gif)
+![预览](assets/image/drawing.gif)
 
 ## 关注与交流
 <div style="text-align:center">
 <h4>关注我的微信<h4>
-<img src="./doc/image/mp.jpg" width="200"/> 
+<img src="./assets/image/mp.jpg" width="200"/> 
 </div>
