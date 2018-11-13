@@ -13,6 +13,9 @@ export default class Participant {
     }
     throw new Error(`'${str}' 无效: 姓名和手机号都需要`);
   }
+  static participantToString(participant) {
+    return `${participant.name}\t${participant.phone}`;
+  }
   toString() {
     return `${this.name}\t${this.phone}`;
   }

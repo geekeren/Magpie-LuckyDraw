@@ -12,7 +12,7 @@ class LotteryPool extends Component {
     super(props);
     this.state = {
       error: props.allParticipants && props.allParticipants.length > 0 ? '' : '抽奖池为空！',
-      allParticipantsInput: this.props.allParticipants.join("\n")
+      allParticipantsInput: this.props.allParticipants.map(participant => Participant.participantToString(participant)).join("\n")
     }
   }
 
