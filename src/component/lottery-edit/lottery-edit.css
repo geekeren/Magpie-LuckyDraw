@@ -50,3 +50,7 @@
     color: #ffff02;
     font-size: 1.2em;
 }
+.lottery-item-add {
+    margin-top: 20px;
+    cursor: pointer;
+}

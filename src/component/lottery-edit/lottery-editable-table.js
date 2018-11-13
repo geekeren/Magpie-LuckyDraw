@@ -60,7 +60,9 @@ class LotteryEditableItem extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     setTimeout(() => {
-      this.lotteryItemBodyRef.scrollTo(this.lotteryItemBodyRef.scrollHeight, this.lotteryItemBodyRef.scrollHeight);
+      if (this.lotteryItemBodyRef) {
+        this.lotteryItemBodyRef.scrollTo(this.lotteryItemBodyRef.scrollHeight, this.lotteryItemBodyRef.scrollHeight);
+      }
     }, 100)
   }
 
@@ -91,6 +93,7 @@ class LotteryEditableItem extends React.Component {
         >
           <FontAwesomeIcon
             icon={faPlusCircle}/>
+          添加奖项
         </div>
       </div>
     )
