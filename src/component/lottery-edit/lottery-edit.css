@@ -3,27 +3,38 @@
     padding: 20px 30px;
     background: #6fe5e436;
     border-radius: 5px;
-    max-height: 200px;
+    height: 160px;
     overflow: scroll;
     box-shadow: #ffff0261 2px 4px 1px;
     border: solid 1px #ffffff30;
     font-size: 20px;
 }
 .lottery-item-body input {
+    padding-bottom: 10px;
     font-size: 16px;
 }
 .lottery-item, .lottery-items-header {
     align-content: center;
-    padding: 5px 10px;
+    padding: 10px 10px;
     display: flex;
 
 }
 
 .lottery-item {
-    border-bottom: 1px solid #61606087;
+    border-bottom: 1px dotted #6f7375;
 }
 
-.lottery-item span{
+.lottery-item .lottery-item-remove {
+    visibility: hidden;
+    margin-left: 20px;
+}
+.lottery-item:hover .lottery-item-remove {
+    visibility: visible;
+}
+.lottery-item:hover {
+    background: #072028;
+}
+.drag-handle{
     cursor: move;
 }
 .lottery-item-name {

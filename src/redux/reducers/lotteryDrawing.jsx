@@ -1,16 +1,17 @@
 import Action from '../actions/_actions'
 
+const uuidv4 = require('uuid/v4');
 const initialState = () => ({
     setting: [{
-      id: 10003,
+      id: uuidv4(),
       title: '三等奖',
       totalCount: 3,
     },{
-      id: 10002,
+      id: uuidv4(),
       title: '二等奖',
       totalCount: 2,
     },{
-      id: 10001,
+      id: uuidv4(),
       title: '一等奖',
       totalCount: 1,
     }]
