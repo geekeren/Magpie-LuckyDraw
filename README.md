@@ -38,6 +38,8 @@ yarn start
 
 ## 三、关注与交流
 <div style="text-align:center">
+<h4>支持作者<h4>
+<img src="./assets/image/gift.jpg" width="200"/> 
 <h4>关注我的微信<h4>
 <img src="./assets/image/mp.jpg" width="200"/> 
 </div>
