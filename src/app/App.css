@@ -9,6 +9,18 @@
   overflow: scroll;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #1f93b8;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
 .header {
   left:40px;
   position: fixed;

@@ -4,7 +4,7 @@
     background: #6fe5e436;
     border-radius: 5px;
     height: 160px;
-    overflow: scroll;
+    overflow-y: scroll;
     box-shadow: #ffff0261 2px 4px 1px;
     border: solid 1px #ffffff30;
     font-size: 20px;

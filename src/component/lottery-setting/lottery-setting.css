@@ -1,5 +1,5 @@
 .lottery-setting {
-    width: 500px;
+    min-width: 500px;
 }
 .lottery-setting header {
     margin-bottom: 40px;

@@ -1,7 +1,7 @@
 #input_container textarea {
     background: rgba(3, 169, 244, 0.45);
     height: 380px;
-    width: 500px;
+    min-width: 500px;
     max-width: 100%;
     font-size: 20px;
     padding: 10px 50px;
