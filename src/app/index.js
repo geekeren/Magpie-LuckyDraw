@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Background
-          showBackground={false}
+          showBackground={true}
         >
           {!this.state.confirmRecovered ?
             <Modal
