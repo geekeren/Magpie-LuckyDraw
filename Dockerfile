@@ -1,4 +1,4 @@
-FROM node:8.0-alpine AS BUILD_ENV
+FROM node:10.15.0-alpine AS BUILD_ENV
 WORKDIR /magpie
 ADD . .
 RUN yarn install && yarn build
