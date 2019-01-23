@@ -50,7 +50,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Background>
+        <Background
+          showBackground={false}
+        >
           {!this.state.confirmRecovered ?
             <Modal
               style={{
