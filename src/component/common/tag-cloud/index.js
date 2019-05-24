@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 const $ = window.$;
 
@@ -38,7 +38,7 @@ class TagCloud extends React.Component {
     );
   }
 }
-TagCloud.PropTypes = {
+TagCloud.propTypes = {
   tags: PropTypes.array.isRequired,
 };
 

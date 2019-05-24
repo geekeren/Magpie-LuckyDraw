@@ -100,7 +100,7 @@ class LotteryEditableItem extends React.Component {
   }
 }
 
-LotteryEditableItem.PropTypes = {
+LotteryEditableItem.propTypes = {
   lotteries: PropTypes.array,
   setLottery: PropTypes.func,
 };

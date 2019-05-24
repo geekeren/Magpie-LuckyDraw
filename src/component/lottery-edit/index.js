@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import './lottery-edit.css';
 import LotteryEditableTable from './lottery-editable-table';
 
