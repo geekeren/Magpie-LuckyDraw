@@ -22,7 +22,9 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活�
 
 ### 下载安装
 
-[下载软件包在本地运行](https://github.com/geekeren/Magpie-LuckyDraw/releases)
+下载软件包在本地运行
+- [Windows版](https://github.com/geekeren/Magpie-LuckyDraw/releases)
+- [MAC版](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 
 ### 下载源代码构建运行
 ```
