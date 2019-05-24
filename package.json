@@ -50,7 +50,7 @@
     "electron-pack": "build -c.extraMetadata.main=build/electron.js",
     "pre-pack": "yarn build",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "dist": "electron-builder --win --x64"
+    "dist": "electron-builder -mwl"
   },
   "bin": {
     "magpie": "./cli.js"
