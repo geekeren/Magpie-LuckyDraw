@@ -54,36 +54,7 @@ class App extends Component {
           showBackground={true}
         >
           {!this.state.confirmRecovered ?
-            <Modal
-              style={{
-                overlay: {
-                  userSelect: 'none',
-                  display: "flex",
-                  alignItems: "center",
-                  backgroundColor: 'rgb(100,100,100,0.4)'
-                },
-                content: {
-                  backgroundColor: 'rgba(250, 250, 250, 0.95)',
-                  position: "relative",
-                  height: 200,
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'black',
-                  fontSize: 24,
-                  textAlign: 'center',
-                  top: '',
-                  left: '',
-                  right: '',
-                  bottom: '',
-                  border: 'none',
-                  width: 360,
-                  margin: "0 auto",
-                }
-              }}
-              isOpen={!this.state.confirmRecovered}
-            >
-              <div>是否恢复上次数据？</div>
-            </Modal>
+            undefined
             :
             <Provider store={this.store}>
               <div>
