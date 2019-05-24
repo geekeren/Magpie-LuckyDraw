@@ -1,6 +1,7 @@
 {
   "name": "magpie-draw",
   "version": "0.1.0",
+  "main": "main.js",
   "author": {
     "name": "Geekeren",
     "url": "http://wangbaiyuan.cn",
@@ -14,12 +15,13 @@
   "bugs": {
     "url": "https://github.com/geekeren/Magpie-LuckyDraw/issues"
   },
-  "homepage": "https://magpie.wangbaiyuan.cn",
+  "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
+    "electron": "^5.0.2",
     "fireworks-react": "^1.0.12",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
@@ -42,6 +44,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "electron-start": "electron .",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
