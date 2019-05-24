@@ -1,6 +1,6 @@
 # Magpie
 
-![Github Release](https://img.shields.io/github/release/geekeren/Magpie-LuckyDraw.svg)
+[![Github Release](https://img.shields.io/github/release/geekeren/Magpie-LuckyDraw.svg)](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 [![Dockerhub](https://img.shields.io/docker/automated/bywang/magpie.svg)](https://hub.docker.com/r/bywang/magpie/)
 [![Dockerhub](https://img.shields.io/docker/build/bywang/magpie.svg)](https://hub.docker.com/r/bywang/magpie/)
 [![License](https://img.shields.io/github/license/geekeren/Magpie-LuckyDraw.svg)](https://github.com/geekeren/Magpie-LuckyDraw/blob/master/LICENSE)
@@ -20,7 +20,11 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活�
 
 [点击使用：https://magpie.wangbaiyuan.cn](https://magpie.wangbaiyuan.cn)
 
-### 下载源代码运行
+### 下载安装
+
+[下载软件包在本地运行](https://github.com/geekeren/Magpie-LuckyDraw/releases)
+
+### 下载源代码构建运行
 ```
 git clone git@github.com:geekeren/Magpie-LuckyDraw.git
 yarn install
