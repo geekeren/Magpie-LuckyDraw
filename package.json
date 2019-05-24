@@ -1,5 +1,5 @@
 {
-  "name": "magpie-draw",
+  "name": "Magpie 幸运抽奖",
   "version": "0.1.0",
   "main": "main.js",
   "author": {
@@ -46,7 +46,9 @@
     "build": "react-scripts build",
     "electron-start": "electron .",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "packageMac": "electron-packager . 'Magpie幸运抽奖 –darwin –out out_dir –arch=x64 –electron-version=0.3.1",
+    "packageWin": " electron-packager . 'Magpie幸运抽奖' -win32 -out out_dir -arch=x64 -electron-version=0.3.1",
   },
   "bin": {
     "magpie": "./cli.js"
