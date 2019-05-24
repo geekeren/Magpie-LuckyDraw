@@ -1,6 +1,6 @@
 {
   "name": "magpie-draw",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "public/electron.js",
   "author": {
     "name": "Geekeren",
@@ -64,8 +64,8 @@
     "directories": {
       "buildResources": "assets"
     },
-    "productName":"Magpie幸运抽奖",
-    "copyright":"©2019 王柏元 <http://wangbaiyuan.cn>"
+    "productName": "Magpie幸运抽奖",
+    "copyright": "©2019 王柏元 <http://wangbaiyuan.cn>"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
