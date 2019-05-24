@@ -1,7 +1,7 @@
 {
-  "name": "Magpie 幸运抽奖",
-  "version": "0.1.0",
-  "main": "main.js",
+  "name": "magpie-draw",
+  "version": "0.3.1",
+  "main": "public/electron.js",
   "author": {
     "name": "Geekeren",
     "url": "http://wangbaiyuan.cn",
@@ -15,13 +15,13 @@
   "bugs": {
     "url": "https://github.com/geekeren/Magpie-LuckyDraw/issues"
   },
-  "homepage": ".",
+  "homepage": "./",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
-    "electron": "^5.0.2",
+    "electron-is-dev": "^1.1.0",
     "fireworks-react": "^1.0.12",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
@@ -47,15 +47,34 @@
     "electron-start": "electron .",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "packageMac": "electron-packager . 'Magpie幸运抽奖 –darwin –out out_dir –arch=x64 –electron-version=0.3.1",
-    "packageWin": " electron-packager . 'Magpie幸运抽奖' -win32 -out out_dir -arch=x64 -electron-version=0.3.1",
+    "electron-pack": "build -c.extraMetadata.main=build/electron.js",
+    "pre-pack": "yarn build",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dist": "electron-builder --win --x64"
   },
   "bin": {
     "magpie": "./cli.js"
   },
+  "build": {
+    "appId": "cn.wangbaiyuan.magpie",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "productName":"Magpie幸运抽奖",
+    "copyright":"©2019 王柏元 <http://wangbaiyuan.cn>"
+  },
   "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.40.2",
     "react-edit-inline": "^1.0.8",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "typescript": "^3.4.5",
+    "wait-on": "^3.2.0"
   },
   "browserslist": [
     ">0.2%",
