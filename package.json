@@ -55,18 +55,6 @@
   "bin": {
     "magpie": "./cli.js"
   },
-  "build": {
-    "appId": "cn.wangbaiyuan.magpie",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    },
-    "productName": "Magpie幸运抽奖",
-    "copyright": "©2019 王柏元 <http://wangbaiyuan.cn>"
-  },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "electron": "^5.0.2",

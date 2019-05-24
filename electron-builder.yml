@@ -1,0 +1,13 @@
+appId: cn.wangbaiyuan.magpie
+files:
+- build/**/*
+- node_modules/**/*
+productName: Magpie幸运抽奖
+artifactName: ${name}-${version}-for-${os}.${ext}
+icon: build/icon.png
+mac:
+  target: dmg
+win:
+  target: portable
+linux:
+  target: deb
