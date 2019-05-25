@@ -4,7 +4,8 @@ const $ = window.$;
 
 class TagCloud extends React.Component {
   componentDidMount() {
-    const entries = this.props.tags.map(tag => ({
+    const displayTags = this.props.tags.length > 100 ? this.props.tags.slice(0, 100) : this.props.tags;
+    const entries = displayTags.map(tag => ({
       label: tag
     }));
     const settings = {
