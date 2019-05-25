@@ -28,14 +28,15 @@ export default class DrawService {
     return this;
   }
 
-  remove(oneItem) {
-    this.all = this.all.filter((item) => item !== oneItem);
+  removeItem(oneItemIndex) {
+    this.all.splice(oneItemIndex, 1);
   }
 
   change() {
     const index = Math.floor(Math.random() * this.all.length);
-    this.currentlySelected = this.all[index];
-    this.onSelectedChangedCallback(this.currentlySelected);
+    this.currentlySelectedIndex = index;
+    this.currentlySelectedItem = this.all[index];
+    this.onSelectedChangedCallback(this.currentlySelectedItem);
   }
 
   setOnSelectedChangedCallback(callback) {
@@ -63,9 +64,9 @@ export default class DrawService {
       setTimeout((() => {
         clearInterval(this.timer);
         if (this.noDuplicate) {
-          this.remove(this.currentlySelected);
+          this.removeItem(this.currentlySelectedIndex);
         }
-        callback(this.currentlySelected);
+        callback(this.currentlySelectedItem);
         this.isRolling = false;
         this.setPickBlocked(false);
       }).bind(this), 1000, this);
