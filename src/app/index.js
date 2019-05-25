@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect, Route, Switch } from 'react-router'
-import Modal from 'react-modal';
+import { Redirect, Route, Switch } from 'react-router';
 import Background from '../component/background';
 import Header from '../component/header';
 import Footer from '../component/footer';

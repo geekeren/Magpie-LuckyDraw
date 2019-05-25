@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer className={this.props.className}>©2018 All rights reversed. Baiyuan @ThoughtWorks <a target={"_blank"} href={'https://github.com/geekeren/Magpie-LuckyDraw'}>Github</a></footer>
-    );
-  }
-}
+const Footer = (props) => (
+      <footer className={props.className}>
+        ©{new Date().getFullYear()}
+        <span> <a target='_blank' href='http://wangbaiyuan.cn'>Baiyuan Wang</a> </span>
+        All Rights Reversed.
+        <span>  <a target='_blank' href='https://github.com/geekeren/Magpie-LuckyDraw'>Github</a> </span>
+      </footer>
+);
 
 export default Footer;

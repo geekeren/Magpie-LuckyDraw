@@ -14,13 +14,13 @@ class TagCloud extends React.Component {
       radius: '65%',
       radiusMin: 75,
       bgDraw: false,
-      opacityOver: 1.00,
+      opacityOver: 0.95,
       opacityOut: 0.05,
       opacitySpeed: 6,
       fov: 800,
       speed: 0.2,
       fontFamily: 'Oswald, Arial, sans-serif',
-      fontSize: '20',
+      fontSize: '16',
       fontColor: '#eee',
       fontWeight: 'normal',
       fontStyle: 'normal',
@@ -28,7 +28,6 @@ class TagCloud extends React.Component {
       fontToUpperCase: false
     };
     this.$el = $(this.el);
-    console.log(this.$el);
     this.$el.svg3DTagCloud( settings );
   }
 

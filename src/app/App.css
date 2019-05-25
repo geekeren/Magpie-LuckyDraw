@@ -34,6 +34,7 @@
   margin: 0px 10px 2px 2px;
 }
 .footer {
+  font-size: 0.9em;
   right:40px;
   position: fixed;
   bottom: 20px;
@@ -41,7 +42,7 @@
   color: #888888;
 }
 .footer a {
-  color: #a1a1a1;
+  color: #979797;
 }
 button {
   cursor: pointer;

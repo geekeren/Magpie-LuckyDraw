@@ -16,6 +16,10 @@ class LotteryPool extends Component {
     }
   }
 
+  componentDidMount() {
+    this.verifyParticipants();
+  }
+
   render() {
     return (
       <div className="lottery-pool">
@@ -32,7 +36,12 @@ class LotteryPool extends Component {
             onChange={(event) => this.onTextChange(event.target.value)}
             style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
           />
-          <div className={'err_msg'}>{this.state.error}</div>
+          <div className={'notice_msg'}>
+            {this.state.error && <span className={'err_msg'}>{this.state.error}</span>}
+            {this.state.validParticipantCount &&
+            <div>参与者总数：{this.state.validParticipantCount}</div>
+            }
+          </div>
         </div>
         <section className={'next-btn'}>
           <button disabled={!!this.state.error} className={!!this.state.error ? "disable" : ''}
@@ -64,33 +73,17 @@ class LotteryPool extends Component {
     this.setState({
       allParticipantsInput: value,
     }, () => {
-      this.verifyParticipantsInput(this.state.allParticipantsInput)
-        .then((allParticipants) => {
-          if (allParticipants.length > 0) {
-            this.setState({
-              error: ''
-            });
-          } else {
-            this.setState({
-              error: '抽奖池为空！'
-            });
-          }
-        })
-        .catch(error => {
-          this.setState({
-            error: error.message
-          });
-        })
+      this.verifyParticipants();
     })
   };
   launchFullscreen = (element) => {
-    if(element.requestFullscreen) {
+    if (element.requestFullscreen) {
       element.requestFullscreen();
-    } else if(element.mozRequestFullScreen) {
+    } else if (element.mozRequestFullScreen) {
       element.mozRequestFullScreen();
-    } else if(element.webkitRequestFullscreen) {
+    } else if (element.webkitRequestFullscreen) {
       element.webkitRequestFullscreen();
-    } else if(element.msRequestFullscreen) {
+    } else if (element.msRequestFullscreen) {
       element.msRequestFullscreen();
     }
   }
@@ -104,6 +97,27 @@ class LotteryPool extends Component {
       .catch(error => {
         this.setState({
           error
+        });
+      })
+  }
+
+  verifyParticipants() {
+    this.verifyParticipantsInput(this.state.allParticipantsInput)
+      .then((allParticipants) => {
+        if (allParticipants.length > 0) {
+          this.setState({
+            error: '',
+            validParticipantCount: allParticipants.length
+          });
+        } else {
+          this.setState({
+            error: '抽奖池为空！'
+          });
+        }
+      })
+      .catch(error => {
+        this.setState({
+          error: error.message
         });
       })
   }
