@@ -2,4 +2,7 @@ git:
   tagName: v${version}
 github:
   release: true
-  assets: dist/${name}-${version}-for-${os}.dmg
+  assets:
+  - dist/${name}-${version}-for-mac.dmg
+  - dist/${name}-${version}-for-win.exe
+  - dist/${name}-${version}-for-linux.deb
