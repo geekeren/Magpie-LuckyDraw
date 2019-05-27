@@ -53,7 +53,7 @@ class LotteryPool extends Component {
   }
 
   next = () => {
-    this.props.history.push("/lottery-drawing");
+    this.props.history.push("/lottery-setting");
   }
 
   verifyParticipantsInput = (value) => {
@@ -76,22 +76,10 @@ class LotteryPool extends Component {
       this.verifyParticipants();
     })
   };
-  launchFullscreen = (element) => {
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) {
-      element.msRequestFullscreen();
-    }
-  }
   saveNameList = () => {
     this.verifyParticipantsInput(this.state.allParticipantsInput)
       .then(allParticipants => {
         this.props.setLotteryPool(allParticipants);
-        this.launchFullscreen(document.documentElement);
         this.next();
       })
       .catch(error => {

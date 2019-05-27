@@ -101,7 +101,7 @@ class LotteryDrawing extends Component {
       });
     }
     return currentPrize;
-  }
+  };
   getTitle = () => {
     if (this.state.existingCountOfCurrentPrize === 0 && !this.state.isPrizeChanged) {
       return `${this.state.currentPrize.title}(${this.state.currentPrize.totalCount}名)`
@@ -132,7 +132,26 @@ class LotteryDrawing extends Component {
       return '';
   };
 
+  launchFullscreen(element) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  }
+
   componentDidMount() {
+    const totalLotteryCount = this.props.lotteryDrawing.setting.reduce((sum, l) => (sum + l.totalCount), 0);
+    if (this.props.allParticipants.length < totalLotteryCount) {
+      alert("奖项数大于参与者数");
+      this.props.history.goBack();
+      return ;
+    }
+    this.launchFullscreen(document.documentElement);
     this.drawService = DrawService.from(this.props.allParticipants)
       .setOnSelectedChangedCallback((selectedItem) => {
         this.setState({

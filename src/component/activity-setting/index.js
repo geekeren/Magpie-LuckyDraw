@@ -36,7 +36,7 @@ class ActivitySetting extends Component {
   };
   next = () => {
     this.props.setActivityName(this.state.activityName);
-    this.props.history.push("/lottery-setting")
+    this.props.history.push("/lottery-pool")
   }
 
 }

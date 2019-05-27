@@ -25,7 +25,7 @@ class LotterySetting extends Component {
   }
 
   next = () => {
-    this.props.history.push("/lottery-pool")
+    this.props.history.push("/lottery-drawing")
   }
 }
 
