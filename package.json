@@ -26,20 +26,26 @@
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-fontawesome": "^1.6.1",
-    "react-modal": "^3.8.1",
+    "react-edit-inline": "^1.0.8",
     "react-particles-js": "^2.6.0",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
     "react-sortable-hoc": "^1.9.1",
     "react-table": "^6.10.0",
     "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "shelljs": "^0.8.3",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.40.2",
+    "react-scripts": "3.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "typescript": "^3.4.5",
+    "wait-on": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,15 +60,6 @@
   },
   "bin": {
     "magpie": "./cli.js"
-  },
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "electron": "^5.0.2",
-    "electron-builder": "^20.40.2",
-    "react-edit-inline": "^1.0.8",
-    "redux-logger": "^3.0.6",
-    "typescript": "^3.4.5",
-    "wait-on": "^3.2.0"
   },
   "browserslist": [
     ">0.2%",
