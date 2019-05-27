@@ -1,3 +1,5 @@
+scripts:
+  afterBump: yarn pre-pack && yarn dist
 git:
   tagName: v${version}
 github:
