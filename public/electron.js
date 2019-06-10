@@ -1,4 +1,5 @@
 const electron = require('electron');
+const { autoUpdater } = require("electron-updater")
 const package = require('../package');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -44,6 +45,7 @@ function createWindow() {
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   mainWindow.on('closed', () => mainWindow = null);
   mainWindow.setAutoHideMenuBar(true);
+  autoUpdater.checkForUpdatesAndNotify();
 }
 
 app.on('ready', createWindow);
