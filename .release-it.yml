@@ -7,6 +7,6 @@ git:
 github:
   release: true
   assets:
-  - dist/*.dmg
-  - dist/*.exe
-  - dist/*.deb
+  - dist/*-mac.zip
+  - dist/*-win.exe
+  - dist/*-linux.deb
