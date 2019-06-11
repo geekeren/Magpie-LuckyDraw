@@ -1,5 +1,7 @@
-scripts:
-  afterBump: yarn pre-deploy && yarn deploy
+hooks:
+  after:my-plugin:bump: yarn dist
+  after:git:release: yarn release:web
+
 git:
   tagName: v${version}
 github:

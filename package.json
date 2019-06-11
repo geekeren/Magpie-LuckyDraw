@@ -58,10 +58,10 @@
     "eject": "react-scripts eject",
     "electron-pack": "build -c.extraMetadata.main=build/electron.js",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "pre-deploy": "yarn build",
-    "deploy": "yarn deploy:app && yarn deploy:web",
-    "deploy:app": "rm -rf dist && electron-builder -mwl",
-    "deploy:web": "gh-pages -d build",
+    "dist": "yarn dist:web && yarn dist:app",
+    "dist:web": "build",
+    "dist:app": "rm -rf dist && electron-builder -mwl",
+    "release:web": "gh-pages -d build",
     "release": "release-it"
   },
   "bin": {
