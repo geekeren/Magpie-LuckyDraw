@@ -2,7 +2,6 @@
 
 [![Github Release](https://img.shields.io/github/release/geekeren/Magpie-LuckyDraw.svg)](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 [![Github Release Downloads](https://img.shields.io/github/downloads/geekeren/Magpie-LuckyDraw/total.svg)](https://github.com/geekeren/Magpie-LuckyDraw/releases)
-
 [![Dockerhub](https://img.shields.io/docker/automated/bywang/magpie.svg)](https://hub.docker.com/r/bywang/magpie/)
 [![Dockerhub](https://img.shields.io/docker/build/bywang/magpie.svg)](https://hub.docker.com/r/bywang/magpie/)
 [![Github Release Downloads](https://img.shields.io/badge/Platforms-win%7Cmac%7Clinux%7Cdocker%7Cweb-red.svg)](https://github.com/geekeren/Magpie-LuckyDraw/releases)
