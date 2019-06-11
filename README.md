@@ -5,7 +5,7 @@
 [![Dockerhub](https://img.shields.io/docker/build/bywang/magpie.svg)](https://hub.docker.com/r/bywang/magpie/)
 [![License](https://img.shields.io/github/license/geekeren/Magpie-LuckyDraw.svg)](https://github.com/geekeren/Magpie-LuckyDraw/blob/master/LICENSE)
 
-Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活动、公司年会的抽奖软件。Magpie目前采用纯前端编写而成，主要技术架构是ReactJs+Redux，部分UI的实现使用了React调用Jquery的方案。
+Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活动、公司年会的抽奖软件。Magpie-LuckyDraw支持多平台运行，已经支持在Web、Windows、Mac、Linux、Docker等多平台同步发布。
 
 ### 支持特性
 
@@ -16,25 +16,18 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活�
 
 ## 一、 使用
 
-### 在线使用
+### 1. Web端在线使用
 
 [点击使用：https://magpie.wangbaiyuan.cn](https://magpie.wangbaiyuan.cn)
 
-### 下载安装
+### 2. 桌面版下载安装
 
 下载软件包在本地运行
 - [Windows版](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 - [MAC版](https://github.com/geekeren/Magpie-LuckyDraw/releases)
+- [Linux版](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 
-### 下载源代码构建运行
-```
-git clone git@github.com:geekeren/Magpie-LuckyDraw.git
-yarn install
-yarn start
-```
-- 构建命令：`yarn build`
-
-### 使用Docker本地运行
+### 3. 使用Docker本地运行
 
 本项目已Docker化并托管于Docker hub平台，您可以在安装了Docker环境的情况下执行：
 
@@ -43,6 +36,13 @@ yarn start
 你也可以clone本项目，在本地使用`yarn start` 启动服务
 
 
+### 4. 下载源代码构建运行
+```
+git clone git@github.com:geekeren/Magpie-LuckyDraw.git
+yarn install
+yarn start
+```
+- 构建命令：`yarn build`
 
 ## 二、预览
 ![预览](assets/image/drawing.gif)
