@@ -1,5 +1,5 @@
 scripts:
-  afterBump: yarn pre-pack && yarn dist
+  afterBump: yarn pre-deploy && yarn deploy
 git:
   tagName: v${version}
 github:

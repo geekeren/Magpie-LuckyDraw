@@ -6,7 +6,7 @@ productName: Magpie幸运抽奖
 artifactName: ${name}-${version}-for-${os}.${ext}
 icon: build/icon.png
 mac:
-  target: dmg
+  target: zip
 win:
   target: portable
 linux:

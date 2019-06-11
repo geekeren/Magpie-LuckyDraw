@@ -24,6 +24,7 @@
     "electron-is-dev": "^1.1.0",
     "electron-updater": "^4.0.6",
     "fireworks-react": "^1.0.12",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -56,9 +57,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron-pack": "build -c.extraMetadata.main=build/electron.js",
-    "pre-pack": "yarn build",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "dist": "rm -rf dist && electron-builder -mwl",
+    "pre-deploy": "yarn build",
+    "deploy": "yarn dist:app && yarn dist:web",
+    "deploy:app": "rm -rf dist && electron-builder -mwl",
+    "deploy:web": "gh-pages -d build",
     "release": "release-it"
   },
   "bin": {
