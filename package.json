@@ -1,6 +1,6 @@
 {
   "name": "magpie-draw",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "main": "public/electron.js",
   "author": {
     "name": "Geekeren",
