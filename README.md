@@ -7,14 +7,15 @@
 [![Github Release Downloads](https://img.shields.io/badge/Platforms-win%7Cmac%7Clinux%7Cdocker%7Cweb-red.svg)](https://github.com/geekeren/Magpie-LuckyDraw/releases)
 [![License](https://img.shields.io/github/license/geekeren/Magpie-LuckyDraw.svg)](https://github.com/geekeren/Magpie-LuckyDraw/blob/master/LICENSE)
 
-Magpie，“喜鹊”，取其“报喜”之意，本系统是一款用于活动、公司年会的抽奖软件。Magpie-LuckyDraw支持多平台运行，已经支持在Web、Windows、Mac、Linux、Docker等多平台同步发布。
+Magpie，“喜鹊”，取其“报喜”之意，本系统是一款免费开源的滚动抽奖系统，适用于公司年会、大型聚会等各种场景。Magpie-LuckyDraw支持多平台运行，已经支持在Web、Windows、Mac、Linux、Docker等多平台同步发布。
 
 ### 支持特性
 
-- 3D标签云显示参与者姓名
-- 获奖者不重复中奖
-- 奖项的增加、编辑以及抽取顺序
-- 灾难恢复，二次访问时可以恢复上次抽奖信息
+- [x] 3D标签云显示参与者姓名
+- [x] 获奖者不重复中奖
+- [x] 奖项编辑：奖项数设置、奖项的编辑以及抽取的出场顺序
+- [x] 灾难恢复，意外退出浏览器页面时，二次访问时可以恢复上次抽奖信息
+- [x] 支持Windows、Linux、MacOSX、网页端、Docker等多平台
 
 ## 一、 使用
 
