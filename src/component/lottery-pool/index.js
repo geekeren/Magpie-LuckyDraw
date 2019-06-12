@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { connect } from 'react-redux';
-import { setLotteryPool } from '../../redux/actions/lotteryPool'
+import { setLotteryPool } from '../../redux/actions/lotteryPool';
 import Participant from "../../model/Participant";
+import mockParticipants from "../../_data/mockParticipants";
 import './lottery-pool.css'
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
 class LotteryPool extends Component {
   constructor(props) {
@@ -24,7 +26,12 @@ class LotteryPool extends Component {
     return (
       <div className="lottery-pool">
         <header>抽奖池设置</header>
-        <section>每一行表示一名参与者（格式：‘姓名 手机号’）</section>
+        <section>每一行表示一名参与者（格式：‘姓名 手机号’）
+          <span className={'load_demo'} >
+            <FontAwesomeIcon icon={faQuestionCircle} />
+            <a onClick={this.loadDemoData}>加载示例数据</a>
+          </span>
+        </section>
         <div id="input_container">
           <textarea
             id="nameList"
@@ -32,7 +39,7 @@ class LotteryPool extends Component {
             multiple
             required
             placeholder="郭晓 13800138000"
-            defaultValue={this.state.allParticipantsInput}
+            value={this.state.allParticipantsInput}
             onChange={(event) => this.onTextChange(event.target.value)}
             style={{ outlineColor: this.state.error ? '#ff5417' : '#50c617' }}
           />
@@ -54,7 +61,7 @@ class LotteryPool extends Component {
 
   next = () => {
     this.props.history.push("/lottery-setting");
-  }
+  };
 
   verifyParticipantsInput = (value) => {
     return new Promise((resolve, reject) => {
@@ -87,7 +94,11 @@ class LotteryPool extends Component {
           error
         });
       })
-  }
+  };
+
+  loadDemoData = () => {
+    this.onTextChange(mockParticipants);
+  };
 
   verifyParticipants() {
     this.verifyParticipantsInput(this.state.allParticipantsInput)

@@ -23,6 +23,14 @@
     color: red;
 }
 
+.load_demo {
+    color: lightgray;
+    font-size: 0.8em;
+    float: right;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .lottery-pool header {
     font-size: 30px;
 }
