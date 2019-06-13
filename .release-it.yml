@@ -10,5 +10,3 @@ github:
   - dist/*-mac.zip
   - dist/*-win.exe
   - dist/*-linux.deb
-
-npm: false
