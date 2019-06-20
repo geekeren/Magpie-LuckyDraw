@@ -48,6 +48,7 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款免费开�
 ### 4. 下载源代码构建运行
 ```
 git clone git@github.com:geekeren/Magpie-LuckyDraw.git
+cd Magpie-LuckyDraw
 yarn install
 yarn start
 ```
