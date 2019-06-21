@@ -17,6 +17,12 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款免费开�
 - [x] 灾难恢复，意外退出浏览器页面时，二次访问时可以恢复上次抽奖信息
 - [x] 支持Windows、Linux、MacOSX、网页端、Docker等多平台
 
+### 预期支持特性
+
+- [ ] 手机小程序或APP控制抽奖过程
+- [ ] 云端支持，在服务器实现抽奖
+- [ ] 集成金数据等活动信息收集平台
+
 ## 一、 使用
 
 ### 1. Web端在线使用
@@ -42,6 +48,7 @@ Magpie，“喜鹊”，取其“报喜”之意，本系统是一款免费开�
 ### 4. 下载源代码构建运行
 ```
 git clone git@github.com:geekeren/Magpie-LuckyDraw.git
+cd Magpie-LuckyDraw
 yarn install
 yarn start
 ```
