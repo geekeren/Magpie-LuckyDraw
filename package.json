@@ -40,14 +40,14 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "electron": "^5.0.3",
+    "electron": "^5.0.4",
     "electron-builder": "^20.43.0",
     "gh-pages": "^2.0.1",
     "react-scripts": "3.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "release-it": "^12.3.0",
-    "typescript": "^3.5.1",
+    "typescript": "^3.5.2",
     "wait-on": "^3.2.0"
   },
   "scripts": {
@@ -63,9 +63,6 @@
     "dist": "yarn dist:web && yarn dist:app",
     "release:web": "gh-pages -d build",
     "release": "release-it"
-  },
-  "bin": {
-    "magpie": "./cli.js"
   },
   "browserslist": [
     ">0.2%",
