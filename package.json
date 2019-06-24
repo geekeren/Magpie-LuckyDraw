@@ -40,9 +40,11 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "cypress": "^3.3.1",
     "electron": "^5.0.4",
     "electron-builder": "^20.43.0",
     "gh-pages": "^2.0.1",
+    "husky": "^2.4.1",
     "react-scripts": "3.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
@@ -54,7 +56,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "electron-start": "electron .",
-    "test": "react-scripts test --env=jsdom",
+    "test:unit": "react-scripts test --env=jsdom",
+    "test:intergration": "cypress run",
     "eject": "react-scripts eject",
     "electron-pack": "build -c.extraMetadata.main=build/electron.js",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
@@ -63,6 +66,11 @@
     "dist": "yarn dist:web && yarn dist:app",
     "release:web": "gh-pages -d build",
     "release": "release-it"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test:intergration"
+    }
   },
   "browserslist": [
     ">0.2%",
