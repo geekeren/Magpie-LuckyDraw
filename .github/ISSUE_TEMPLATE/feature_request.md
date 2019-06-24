@@ -4,7 +4,10 @@ about: Provide an idea to make us better
 
 ---
 
-**Background**
+## Context/Background
 
 
-**What do you want**
+## What do you want?
+
+
+## What's the value?
