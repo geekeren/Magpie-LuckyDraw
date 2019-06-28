@@ -3,11 +3,20 @@ files:
 - build/**/*
 - node_modules/**/*
 productName: Magpie幸运抽奖
-artifactName: ${name}-${version}-for-${os}.${ext}
+artifactName: '${name}-${version}-for-${os}-${arch}.${ext}'
 icon: build/icon.png
+nsis:
+  runAfterFinish: false
+  deleteAppDataOnUninstall: true
+  allowToChangeInstallationDirectory: true
+  oneClick: false
+  installerLanguages: zh_CN
+  language: '2052'
+  perMachine: true
+  createDesktopShortcut: true
+win:
+  target: nsis
 mac:
   target: zip
-win:
-  target: portable
 linux:
   target: deb

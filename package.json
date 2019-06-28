@@ -63,6 +63,12 @@
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "dist:web": "yarn build",
     "dist:app": "rm -rf dist && electron-builder -mwl",
+    "dist:linux": "electron-builder --linux --ia32 --x64",
+    "dist:linux32": "electron-builder --linux --ia32",
+    "dist:linux64": "electron-builder --linux --x64",
+    "dist:win": "electron-builder --win --ia32 --x64",
+    "dist:win32": "electron-builder --win --ia32",
+    "dist:win64": "electron-builder --win --x64",
     "dist": "yarn dist:web && yarn dist:app",
     "release:web": "gh-pages -d build",
     "release": "release-it"
