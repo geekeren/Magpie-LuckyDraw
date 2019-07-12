@@ -22,7 +22,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
     "electron-is-dev": "^1.1.0",
-    "electron-updater": "^4.0.14",
+    "electron-updater": "^4.1.2",
     "fireworks-react": "^1.0.12",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
@@ -34,7 +34,7 @@
     "react-router-dom": "^5.0.1",
     "react-sortable-hoc": "^1.9.1",
     "react-table": "^6.10.0",
-    "redux": "^4.0.3",
+    "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "uuid": "^3.3.2"
   },
@@ -42,15 +42,15 @@
     "concurrently": "^4.1.1",
     "cypress": "^3.4.0",
     "electron": "^5.0.6",
-    "electron-builder": "^20.44.4",
+    "electron-builder": "^21.0.15",
     "gh-pages": "^2.0.1",
     "husky": "^3.0.0",
     "react-scripts": "3.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
-    "release-it": "^12.3.2",
+    "release-it": "^12.3.3",
     "typescript": "^3.5.3",
-    "wait-on": "^3.2.0"
+    "wait-on": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
