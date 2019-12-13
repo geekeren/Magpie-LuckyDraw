@@ -6,6 +6,8 @@
 trigger:
 - master
 
+variables:
+  - group: magpie-luckydraw
 pool:
   vmImage: 'macOS-10.14'
 
@@ -19,3 +21,5 @@ steps:
     yarn install
     yarn dist
   displayName: 'Build Web/Desktop APP'
+  env:
+    GH_TOKEN:$(GITHUB_TOKEN)
