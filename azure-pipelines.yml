@@ -22,4 +22,4 @@ steps:
     yarn dist
   displayName: 'Build Web/Desktop APP'
   env:
-    GH_TOKEN:$(GITHUB_TOKEN)
+    GH_TOKEN: $(GITHUB_TOKEN)
