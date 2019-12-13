@@ -22,10 +22,12 @@
 }
 
 .header {
-  left:40px;
+  -webkit-app-region: drag;
+  cursor: move;
+  width: 100%;
+  padding: 20px 40px;
   position: fixed;
   display: flex;
-  top: 20px;
   font-size: 24px;
   opacity: 0.6;
   align-items: center;

@@ -59,7 +59,7 @@ const particles = {
 class Background extends Component {
   render() {
     return (
-      <div className={'particles'}>
+      <div className={'particles background'}>
         { this.props.showBackground && <Particles
           params={{
             particles,
